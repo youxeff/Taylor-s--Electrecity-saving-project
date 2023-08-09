@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use viewport height for full screen height */
+}
+
+.photo {
+  width: 270px;
+  height: 150px;
+  margin-left: 10px; /* Adjust margin value as needed */
+  background-image: url('/static/img/Logo-Taylors-University.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.form-style {
+  padding: 13px 20px;
+  height: 48px;
+  max-width: 500px; /* Use max-width to prevent overflowing on smaller screens */
+  width: 100%; /* Use percentage width for responsiveness */
+  font-weight: 500;
+  background-color: #d0cfd4;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 22px;
+  outline: none;
+  color: black;
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.3);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form-style:focus {
+  border-bottom: 1px solid #c4c3ca;
+  box-shadow: 0 1px 0 0 #c4c3ca;
+  text-decoration: none;
+}
+
+.Login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  border: 2px solid red;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  position: relative; 
+  font-weight: bold;
+  background-color: red;
+  top: 8%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  margin-top: 2vh;
+}

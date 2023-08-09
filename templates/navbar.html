@@ -1,0 +1,28 @@
+<head>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="container">
+<div class="menu">
+  <img id="photo" src="/static/img/user-pfp.jpeg" alt="User Photo">
+  <div>
+    {% if username %}
+      <a class="mail-name" href="#">
+        <p class="role">Admin</p>
+      </a>
+    {% else %}
+      <a class="mail-name" href="#">
+        <p class="role">Admin</p>
+      </a>
+    {% endif %}
+  </div>
+  <ul class= "links">
+    <li><a href="/dashboard?username={{ username|default }}">Dashboard</a></li>
+    <li><a href="/userlist?username={{ username|default }}">User List</a></li>
+    <li><a href="/billinglist?username={{ username|default }}">Billing List</a></li>
+    <li><a href="/">Log Out</a></li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

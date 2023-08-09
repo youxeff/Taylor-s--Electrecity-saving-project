@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+  <script src="static/js/dashboard.mjs"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body id="home_body">
+  {% include 'navbar.html' %}
+  <div class="content">
+    <img class="logo-photo" id="logo" src="static/img/Logo-Taylors-University.png" alt="logo">
+      <h1>Dashboard</h1>
+    <div>
+      <span class="button">Total No. Users: {{total_users_count}}</span>
+      <span class="button">Total No. Billing: {{total_billing_count}}</span>
+    </div>
+    <button class="button" id="export-btn" onclick="selectExportOption()">Export Data</button>
+    <button class="button">Dummy Button</button>
+  </div>
+</div>
+
+
+</body>
+
+</html>

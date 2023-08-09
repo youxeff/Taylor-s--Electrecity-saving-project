@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor's Electricity Project</title>
+    <link rel="stylesheet" href="/static/css/auth.css">
+</head>
+<script src="static/js/index.js"></script>
+<body>
+    <div class="container">
+        <div class="photo"></div>
+        <form method="GET" action="/login">
+            <div class="form-group">
+                <input type="email" class="form-style" placeholder="Username :" name="username">
+                <i class="input-icon uil uil-at"></i>
+            </div>
+            <div class="form-group mt-2">
+                <input type="password" class="form-style" placeholder="Password:" name="password">
+                <i class="input-icon uil uil-lock-alt"></i>
+            </div> 
+            <button type="submit" class="Login-button">Login</button>
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
+           
+        </form>
+    </div>
+
+    
+</body>
+
+</html>

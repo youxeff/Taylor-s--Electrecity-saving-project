@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor's Electricity Project</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/billing.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js"></script>
+    <script src="static/js/firebase-config.mjs"></script>
+    <script src="{{ url_for('static', filename='js/billing.mjs') }}" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="content">
+        <h1>Billing List</h1>
+        {% include 'searchbar.html'%}
+        <table>
+            <tr>
+                <th>Address</th>
+                <th>Billing type</th>
+                <th>Electric Account</th>
+                <th>Name</th>
+                <th>id</th>
+                <th>No. Of Air Cons</th>
+                <th>No. Of Lighting Units</th>
+                <th>No. Of Occupants</th>
+                <th>No. Of Refrigerators</th>
+            </tr>
+            {% for bill in bills %}
+            <tr> 
+                <td>{{ bill.address }}</td>
+                <td>{{ bill.billingType }}</td>
+                <td>{{ bill.electricAccount }}</td>
+                <td>{{ bill.name }}</td>
+                <td>{{ bill.id }}</td>
+                <td>{{ bill.numOfAirConUnits }}</td>
+                <td>{{ bill.numOfLightingUnits }}</td>
+                <td>{{ bill.numOfOccupants }}</td>
+                <td>{{ bill.numOfRefrigeratorUnits }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+        <div class="pagination">
+            {% if bills %}
+            <div>
+                {% if start_after %}
+                    <a href="/billinglist?page_size={{ page_size }}&start_after={{ start_after }}">Previous Page</a>
+                {% endif %}
+                {% if start_after or bills|length >= page_size %}
+                    <a href="/billinglist?page_size={{ page_size }}&start_after={{ bills[-1].id }}">Next Page</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    
+    </div>
+</body>
+</html>

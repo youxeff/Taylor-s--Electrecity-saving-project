@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 30px;
+    max-width: 100%; /* Fixed maximum width */
+    margin-top: 20px;
+}
+
+.content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Icons */
+.icons {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Search Container */
+.search-container {
+    position: relative; /* Change to relative for responsive positioning */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+    text-align: right; /* Align right for responsive positioning */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 250px;
+}
+
+.search-container button[type="submit"] {
+    padding: 10px;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button[type="submit"] img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    white-space: nowrap; /* Prevent wrapping of navbar items */
+}
+
+.navbar a {
+    display: inline-block; /* Adjust display for inline alignment */
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: block; /* Change to block for vertical stacking */
+        text-align: left;
+    }
+}

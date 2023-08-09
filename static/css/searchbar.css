@@ -1,0 +1,36 @@
+
+/* Search Container */
+.search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 250px;
+}
+
+.search-container button[type="submit"] {
+    padding: 10px;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button[type="submit"] img {
+    width: 16px;
+    height: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    
+    .search-container {
+        position: static;
+        margin-top: 20px;
+    }
+}
