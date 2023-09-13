@@ -129,9 +129,8 @@ tr:nth-child(even) {
 
 .pagination {
     position: relative; /* Change to relative for responsive positioning */
-    margin-top: 20px;
+    display: flex-start;
     text-align: right; /* Align right for responsive positioning */
-    bottom:0;
+    top:20em;
     right: 0;
-    display: block;
 }

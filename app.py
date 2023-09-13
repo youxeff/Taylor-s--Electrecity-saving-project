@@ -33,7 +33,7 @@ def login():
         
         return redirect('/dashboard?username=' + username)
     else:
-        error = 'Invalid username or password'
+        error = 'Invalid username and/or password'
         return redirect('/?error=' + error)
 
 
