@@ -12,9 +12,9 @@ body {
 }
 
 .photo {
-  width: 270px;
-  height: 150px;
-  margin-left: 10px; /* Adjust margin value as needed */
+  width: 600px;
+  height: 450px;
+  /* margin-left: 10px; Adjust margin value as needed */
   background-image: url('/static/img/Logo-Taylors-University.png');
   background-size: cover;
   background-position: center;
@@ -37,10 +37,12 @@ body {
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
   box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.3);
+  margin-left: 30px;
   margin-bottom: 20px;
   margin-top: 10px;
   text-align: left;
   font-weight: bold;
+  display: flex;
 }
 
 .form-style:focus {
@@ -57,7 +59,6 @@ body {
   border: 2px solid red;
   border-radius: 4px;
   color: white;
-  text-decoration: none;
   position: relative; 
   font-weight: bold;
   background-color: red;
@@ -69,11 +70,11 @@ body {
 
 .error{
 
-  margin-left: 30px;
-    padding: 15px 30px;
-    display:flex ;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  display:flex ;
 
-font-family: 'Merriweather', serif;
-font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', sans-serif;
 }
