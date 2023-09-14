@@ -47,8 +47,8 @@ body {
 }
 
 .content .photo {
-  width: 600px;
-  height: 550px;
+  width: 42%;
+  height: 42%;
   margin-left: 100px;
   background-image: url('/static/img/Logo-Taylors-University.png');
   background-size: cover;
