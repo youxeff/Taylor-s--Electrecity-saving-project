@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #f5f5f5;
   position: relative;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Content Area */
@@ -15,19 +16,21 @@ body {
   align-items: normal;
   top: 0px;
   right: 0px;
+  overflow: hidden; /* Prevent content overflow */
 }
 
 .content .button {
-  padding: 8.5%;
+  padding: 100px;
   background-color: #c4c3ca;
   color: black;
   border: none;
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
-  width: 300px;
+  width: 254.16px;
+  height: 172px;
   margin-bottom: 7px;
-  display: inline-block;
+  display: inline;
   text-decoration: none;
   font-weight: bold;
   margin-top: 10px;
@@ -40,11 +43,12 @@ body {
 .content .button:hover {
   background-color: #444;
   box-shadow: #4444444f;
+  color: white;
 }
 
 .content .photo {
-  width: 270px;
-  height: 150px;
+  width: 600px;
+  height: 550px;
   margin-left: 100px;
   background-image: url('/static/img/Logo-Taylors-University.png');
   background-size: cover;
@@ -65,28 +69,26 @@ body {
   align-items: center;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 768px) {
   .container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .menu {
-      width: 100%;
-      height: auto;
-      justify-content: center;
+    width: 100%;
+    height: auto;
+    justify-content: center;
   }
 
   .content {
-      padding: 10px;
+    padding: 10px;
   }
 
   .search-container {
-      position: static;
-      margin-top: 20px;
+    position: static;
+    margin-top: 20px;
   }
 }
-
 /* Navbar */
 .navbar {
   position: fixed;
