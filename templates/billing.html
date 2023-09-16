@@ -12,6 +12,7 @@
     <script src="static/js/firebase-config.mjs"></script>
     <script src="{{ url_for('static', filename='js/billing.mjs') }}" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="static/img/faveicon.png"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -20,7 +21,6 @@
     {% include 'navbar.html' %}
     <div class="content">
         <h1>Billing List</h1>
-        {% include 'searchbar.html'%}
         <table>
             <tr>
                 <th>Address</th>
