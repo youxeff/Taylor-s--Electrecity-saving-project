@@ -14,14 +14,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     {% include 'navbar.html' %}
   
     <div class="content">
         <h1>User List</h1>   
-        {% include 'searchbar.html'%}
+        <input id="myInput" type="text" placeholder="Search..">
         <table>
+            <thead>
             <tr> 
                 <th>Full Name</th>
                 <th>Address </th>
@@ -30,6 +32,8 @@
                 <th>Active</th>
                 <th>Export</th>
             </tr>
+            </thead>
+            <tbody id="myTable">
             {% for user in users %}
             <tr>
                 <td>{{ user.fullName }}</td>
@@ -40,7 +44,19 @@
                 <td><a href="{{ url_for('export_users') }}"><img class="icons" src="static/img/export.png" alt="export"></a></td>
             </tr>
             {% endfor %}
+            </tbody>
         </table>
     </div>
+    <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
 </body>
+
 </html>
