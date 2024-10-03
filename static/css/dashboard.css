@@ -28,9 +28,9 @@ body {
   font-size: 16px;
   cursor: pointer;
   width: 254.16px;
-  height: 172px;
+  height: 120px;
   margin-bottom: 7px;
-  display: inline;
+  display: inline-flex;
   text-decoration: none;
   font-weight: bold;
   margin-top: 10px;
@@ -39,8 +39,25 @@ body {
   padding-right: 60px;
   font-weight: bold;
 }
+.content .export-button {
+  padding: 100px;
+  background-color: #c4c3ca;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 254.16px;
+  height: 120px;
+  margin-bottom: 7px;
+  display: inline-flex;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-weight: bold;
+}
 
-.content .button:hover {
+.content .button:hover, .content .export-button:hover {
   background-color: #444;
   box-shadow: #4444444f;
   color: white;

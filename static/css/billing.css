@@ -133,4 +133,12 @@ tr:nth-child(even) {
     text-align: right; /* Align right for responsive positioning */
     top:20em;
     right: 0;
+    text-decoration: none;
+    color: black
+}
+
+.pagination :first-child{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black
 }

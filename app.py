@@ -37,7 +37,7 @@ def login():
         return redirect('/?error=' + error)
 
 
-@app.route('/searchbar', methods=['GET'])
+@app.route('/searchbar', methods=['POST'])
 def search():
     search_term = request.args.get('q')
 
